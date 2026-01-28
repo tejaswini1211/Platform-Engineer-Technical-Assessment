@@ -1,0 +1,5 @@
+_sourceCategory="prod/web/logs" 
+| parse "uri=* " as uri 
+| parse "responseTime=* " as resp_time 
+| where uri = "/api/data" and resp_time > 3000 
+| count as total_breaches

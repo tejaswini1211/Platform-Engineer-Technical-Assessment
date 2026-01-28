@@ -30,3 +30,4 @@ def lambda_handler(event, context):
     except Exception as e: 
         logger.error(f"Error executing remediation: {str(e)}") 
         return {"status": "error", "message": str(e)}
+        demo 
